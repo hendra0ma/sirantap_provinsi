@@ -546,7 +546,7 @@ Route::get('/ganti-domain-kota',function(){
     $domain = RegenciesDomain::get();
     foreach($domain as $dom){
         $exDomain = explode('.',$dom->domain);
-        $newDomain = $exDomain[1].".".$exDomain[2].".".$exDomain[0].".hisuara.id";
+        $newDomain = $exDomain[1].".".$exDomain[2].".".$exDomain[0].".sirantap.id";
        RegenciesDomain::where('id',$dom->id)->update([
         "domain"=>$newDomain
        ]);
@@ -556,7 +556,7 @@ Route::get('/ganti-domain-provinsi',function(){
     $domain = ProvinceDomain::get();
     foreach($domain as $dom){
         $exDomain = explode('.',$dom->domain);
-        $newDomain = $exDomain[0].".".$exDomain[1].".hisuara.id";
+        $newDomain = $exDomain[0].".".$exDomain[1].".sirantap.id";
         ProvinceDomain::where('id',$dom->id)->update([
         "domain"=>$newDomain
        ]);
